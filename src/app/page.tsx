@@ -1,4 +1,7 @@
 "use client";
+import { CancelRequestAxios } from "@/components/CancelingRequestAxios";
+import { SendArchive } from "@/components/SendArchive";
+import { UseAxios } from "@/components/UseAxios";
 import axios from "axios";
 
 export default function Home() {
@@ -31,6 +34,9 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <button onClick={handleGetPosts}>Pegar posts</button>
+      <UseAxios />
+      <SendArchive />
+      <CancelRequestAxios />
     </div>
   );
 }
